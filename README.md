@@ -25,6 +25,7 @@ It takes care of the `scrolloff` value which means it may scroll the buffer slig
 # Suggested mapping
 
 map global normal <a-%> :select-view<ret> -docstring 'select view'
+map global view s <esc>:select-view<ret> -docstring 'select view'
 ```
 
 ## Licence
