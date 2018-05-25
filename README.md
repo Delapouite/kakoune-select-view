@@ -28,6 +28,12 @@ map global normal <a-%> :select-view<ret> -docstring 'select view'
 map global view s <esc>:select-view<ret> -docstring 'select view'
 ```
 
+## See also
+
+- [kakoune-phantom-selection](https://github.com/occivink/kakoune-phantom-selection)
+- [kakoune-vertical-selection](https://github.com/occivink/kakoune-vertical-selection)
+- [kakoune-text-objects](https://github.com/Delapouite/kakoune-text-objects)
+
 ## Licence
 
 MIT
