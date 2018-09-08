@@ -1,17 +1,14 @@
-# to restore the value afterward
-decl -hidden str _scrolloff
+# to restore the value afterwards
+declare-option -hidden str _scrolloff
 
-def select-view -docstring 'select visible part of buffer' %{
-  set window _scrolloff %opt{scrolloff}
-  set window scrolloff 0,0
+define-command select-view -docstring 'select visible part of buffer' %{
+  set-option window _scrolloff %opt{scrolloff}
+  set-option window scrolloff 0,0
 
-  # goto fiesta top → bottom → right
-  exec gtGbGl
+  execute-keys gtGbGl
 
-  # one shot hook, 'PromptEnd'
-  hook window -group select-view NormalKey .* %{
-    set window scrolloff %opt{_scrolloff}
-    rmhooks window select-view
+  hook window -once NormalKey .* %{
+    set-option window scrolloff %opt{_scrolloff}
   }
 }
 
