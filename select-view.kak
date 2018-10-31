@@ -14,5 +14,5 @@ define-command select-view -docstring 'select visible part of buffer' %{
 
 # Suggested mapping
 
-#map global normal <a-%> :select-view<ret> -docstring 'select view'
-#map global view s <esc>:select-view<ret> -docstring 'select view'
+#map global normal <a-%> ': select-view<ret>' -docstring 'select view'
+#map global view s '<esc>: select-view<ret>' -docstring 'select view'

@@ -6,6 +6,16 @@
 
 Add `select-view.kak` to your autoload dir: `~/.config/kak/autoload/`.
 
+Or via [plug.kak](https://github.com/andreyorst/plug.kak):
+
+```
+plug 'delapouite/kakoune-select-view' %{
+  # Suggested mappings
+  map global normal <a-%> ': select-view<ret>' -docstring 'select view'
+  map global view s '<esc>: select-view<ret>' -docstring 'select view'
+}
+```
+
 ## Usage
 
 Sometimes you need to edit multiple occurrences of text that seat right under
@@ -20,13 +30,6 @@ As its name implies, the `select-view` command answers this problematic by only
 selecting the visible part of the buffer.
 
 It takes care of the `scrolloff` value which means it may scroll the buffer slightly.
-
-```
-# Suggested mapping
-
-map global normal <a-%> :select-view<ret> -docstring 'select view'
-map global view s <esc>:select-view<ret> -docstring 'select view'
-```
 
 ## See also
 
